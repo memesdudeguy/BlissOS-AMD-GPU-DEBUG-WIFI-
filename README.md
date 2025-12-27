@@ -52,7 +52,9 @@ export BLISS_BUILD_VARIANT=gapps
 export BLISS_BUILD_VARIANT=foss
 ```
 # If using FOSS, also run:
-# ./vendor/foss/update.sh "" bromite  # or just ./vendor/foss/update.sh
+```
+ ./vendor/foss/update.sh "" bromite  # or just ./vendor/foss/update.sh
+```
 
 # Now to build
 ```
