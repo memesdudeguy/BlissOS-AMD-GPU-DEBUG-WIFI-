@@ -1,5 +1,5 @@
 # BlissOS(AMD-GPU-DEBUG&WIFI)
-# Cloning into 'android-x86'...
+# Cloning into 'BlissOS & Tools'...
 Username for 'https://github.com': you will need this tools on Ubuntu or any Debain GNU/Linux# 1. Install dependencies (as noted in BlissOS docs)
 ```
 sudo apt update
