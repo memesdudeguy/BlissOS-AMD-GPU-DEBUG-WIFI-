@@ -38,4 +38,26 @@ mkdir ~/blissos && cd ~/blissos
 repo init -u https://github.com/BlissOS/platform_manifest.git -b typhoon-x86 --git-lfsSync source
 repo sync -c --force-sync --no-tags --no-clone-bundle -j$(nproc) --optimized-fetch --prune
 ```
+
+# For Vanilla (no Google apps)
+```
+export BLISS_BUILD_VARIANT=vanilla
+```
+# OR for GApps (MindTheGapps)
+```
+export BLISS_BUILD_VARIANT=gapps
+```
+# OR for FOSS (microG + open alternatives)
+```
+export BLISS_BUILD_VARIANT=foss
+```
+# If using FOSS, also run:
+# ./vendor/foss/update.sh "" bromite  # or just ./vendor/foss/update.sh
+
+# Now to build
+```
+source build/envsetup.sh
+lunch bliss_x86_64-userdebug
+make iso_img -j$(nproc)
+```
 #
