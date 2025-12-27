@@ -1,5 +1,6 @@
 # BlissOS(AMD-GPU-DEBUG&WIFI)
-#1. you will need this tools on Ubuntu or any Debain GNU/Linux# 1. Install dependencies (as noted in BlissOS docs)
+# Cloning into 'android-x86'...
+Username for 'https://github.com': you will need this tools on Ubuntu or any Debain GNU/Linux# 1. Install dependencies (as noted in BlissOS docs)
 'sudo apt update
 sudo apt install -y git-core gnupg flex bison gperf build-essential zip curl \
 zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses-dev \
@@ -7,18 +8,18 @@ x11proto-core-dev libx11-dev lib32z-dev ccache libgl1-mesa-dev libxml2-utils \
 xsltproc unzip squashfs-tools python3-mako libssl-dev ninja-build lunzip \
 syslinux syslinux-utils gettext genisoimage bc xorriso xmlstarlet meson \
 glslang-tools git-lfs libncurses6 libncurses6:i386 libelf-dev aapt zstd \
-rdfind nasm
+rdfind nasm'
 
 # Fix libncurses5 compatibility (needed on Ubuntu 24.04+)
-sudo ln -sf /lib/x86_64-linux-gnu/libncurses.so.6 /lib/x86_64-linux-gnu/libncurses.so.5
+'sudo ln -sf /lib/x86_64-linux-gnu/libncurses.so.6 /lib/x86_64-linux-gnu/libncurses.so.5
 sudo ln -sf /lib/x86_64-linux-gnu/libncursesw.so.6 /lib/x86_64-linux-gnu/libncursesw.so.5
 sudo ln -sf /lib/x86_64-linux-gnu/libtinfo.so.6 /lib/x86_64-linux-gnu/libtinfo.so.5
 sudo ln -sf /lib/i386-linux-gnu/libncurses.so.6 /lib/i386-linux-gnu/libncurses.so.5
 sudo ln -sf /lib/i386-linux-gnu/libncursesw.so.6 /lib/i386-linux-gnu/libncursesw.so.5
-sudo ln -sf /lib/i386-linux-gnu/libtinfo.so.6 /lib/i386-linux-gnu/libtinfo.so.5
+sudo ln -sf /lib/i386-linux-gnu/libtinfo.so.6 /lib/i386-linux-gnu/libtinfo.so.5'
 
 # Install Rust toolchain (required)
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+'curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source "$HOME/.cargo/env"
 cargo install cargo-ndk
 rustup target add x86_64-linux-android i686-linux-android
