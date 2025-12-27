@@ -31,4 +31,10 @@ rustup target add x86_64-linux-android i686-linux-android
 cargo install --version 0.69.1 bindgen-cli
 cargo install cbindgen
 ```
-#
+# how to get BlissOS repo
+```
+nitialize repo with BlissOS manifest (Android 13 = typhoon-x86)
+mkdir ~/blissos && cd ~/blissos
+repo init -u https://github.com/BlissOS/platform_manifest.git -b typhoon-x86 --git-lfsSync source
+repo sync -c --force-sync --no-tags --no-clone-bundle -j$(nproc) --optimized-fetch --prune
+```
